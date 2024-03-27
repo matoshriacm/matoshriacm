@@ -25,127 +25,303 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-
-    <!-- Template Stylesheet -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/gallery.css" type="text/css">
-
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #sidebar {
+            display: flex;
+            padding: 20px;
+            border-radius: 10px;
+            background: #d1e5e5;
+            /* Semi-transparent white background */
+            backdrop-filter: blur(10px);
+            /* Blur effect for glass-like appearance */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for depth */
+        }
+
+        #sidebar h2 {
+            font-size: 1.5rem;
+            /* Larger font size for headings */
+            color: #333;
+            /* Dark gray text color */
+        }
+
+        .year {
+            display: block;
+            padding: 10px 20px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Lighter semi-transparent white on hover */
+            color: #007bff;
+
+            /* Semi-transparent white background */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            /* Semi-transparent border */
+            border-radius: 20px;
+
+            /* Dark gray text color */
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            /* Smooth transitions */
+            cursor: pointer;
+        }
+
+        .active-links {
+            background-color: black;
+            color: white;
+        }
+
+        .year:hover {
+            transform: translateY(-2px);
+            /* Move up slightly on hover */
+        }
+
+
+
+
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .card-container {
+            text-align: center;
+            /* Center the event name */
+        }
+
+        .card-container h3 {
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event-title {
+            color: #06bbcc !important;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        .event-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            /* Add gap between images */
+            margin-top: 10px;
+            /* Add some space between event name and images */
+        }
+
+        .card {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.4s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media screen and (max-width: 768px) {
+            .event-group {
+                flex-direction: column;
+                /* Change to column layout on smaller screens */
+                align-items: center;
+                /* Center items in column */
+            }
+
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-    <div class=" topbar " style="background: #d3e7e7; padding: 5px;margin: 0;">
-        <h2 style="font-size: 20px;color: #1924b4; text-align: center; margin: 0;">Matoshri Education Society's</h2>
+    
+    <div class="topbar" style="background: #d3e7e7; padding: 5px; margin: 0;">
+        <h2 style="font-size: 20px; color: #1924b4; text-align: center; margin: 0;">Matoshri Education Society's</h2>
     </div>
+
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-
             <img style="width: 55px; margin-right: 10px;" src="./img/logo.png" alt="ACM">
-            <h2 style="color:#06bbcc !important;" class="m-0 "> Matoshri ACM Student
-                Chapter</span>
-
-            </h2>
+            <h2 style="color: #59d8e9;" class="m-0 text-primary"> Matoshri ACM Student Chapter</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class=" nav-item nav-link">Home</a>
+                <a href="index.html" class="nav-item nav-link">Home</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
                     <div class="dropdown-menu fade-down m-0">
                         <a href="about_acm.html" class="dropdown-item">About ACM</a>
                         <a href="about_masc.html" class="dropdown-item">About Matoshri ACM</a>
-
                     </div>
                 </div>
-                <a href="activities.html" class="nav-item nav-link">ACM Activities</a>
-                <a href="gallery.html" class="nav-item nav-link">Achievement</a>
+                <a href="activities.html" class="nav-item nav-link">Activities</a>
+                <a href="gallery.html" class="nav-item nav-link">Glipmes</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Teams</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Matoshri ACM </a>
+                        <a href="team.html" class="dropdown-item">Matoshri ACM</a>
                         <a href="acmw.html" class="dropdown-item">ACM-W</a>
-
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">More</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="./assets/Newsletter final.pdf" target="_blank" class="dropdown-item"> Newsletter</a>
+                        <a href="#" class="dropdown-item">Contact-us</a>
+                    </div>
+                </div>
             </div>
-            <a href="join.html" style="background: #06bbcc !important;"
-                class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i
-                    class="fa fa-arrow-right ms-3"></i></a>
+            <a href="join.html" class="btn btn-primary py-2 px-3 d-none d-lg-inline-block">Join Now <i
+                    class="fa fa-arrow-right ms-2"></i></a>
         </div>
-
     </nav>
 
     <div class="text-center">
-        <h1 class="display-1">ACM Achievements</h1>
+        <h1 class="display-1">ACM Activities</h1>
         <h5 class="mb-5 text-muted">Glipmes of Activities conducted under Matoshri ACM Student Chapter </h5>
     </div>
 
-    <div>
-        <input type="checkbox" class="checkbox" id="chk" />
 
+
+    <div id="sidebar">
+
+        <a class="year active-links" onclick="showPhotos('2024')">ACM Activities 2024</a>
+        <a class="year" onclick="showPhotos('2023')">ACM Activities 2023</a>
+        <a class="year" onclick="showPhotos('2022')">ACM Activities 2022</a>
+        <a class="year" onclick="showPhotos('2021')">ACM Activities 2021</a>
+        <!-- Add more years as needed -->
     </div>
 
+    <div class="container py-5">
 
-
-    <div class="container ">
-        <div class="row">
-
-            <div class="gallery">
-
-                <figure>
-                    <img src="./img/gall1.jpg" alt="img 1" />
-                    <figcaption>IoTonics 2K23 <small>IoT competetion</small></figcaption>
-                </figure>
-
-                <figure>
-                    <img src="./img/gall2.jpg" alt="img 2" />
-                    <figcaption>IoTonics 2K23 <small>IoT competetion</small></figcaption>
-                </figure>
-
-                <figure>
-                    <img src="./img/gall3.jpg" alt="img 3" />
-                    <figcaption>IoTonics 2K23 <small>IoT competetion</small></figcaption>
-                </figure>
-                <!--        Copy the figure tags along with the content and paste it above this comment.
-                             Replace the link in the src attribute with the image link.
-                             Also change the content in figcaption and small tags according to the location
-                 -->
-
-
+        <div id="content" class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+            <!-- Event photos will be dynamically added here -->
+        </div>
+    </div>
+    <section style="display: none;" id="event-item">
+        <!-- Events Start -->
+        <div class="container-fluid event py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <h1 class="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Upcoming <span
+                        class="text-primary">Events</span>
+                </h1>
+                <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+                    <div class="col-3 col-lg-2 pe-0">
+                        <div class="text-center border-bottom border-dark py-3 px-2">
+                            <h6>01 Jan 2045</h6>
+                            <p class="mb-0">Fri 06:55</p>
+                        </div>
+                    </div>
+                    <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                        <div class="ms-3">
+                            <h4 class="mb-3">Historical Visit</h4>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="overflow-hidden mb-5">
+                            <img src="img/img 1.jpg" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.3s">
+                    <div class="col-3 col-lg-2 pe-0">
+                        <div class="text-center border-bottom border-dark py-3 px-2">
+                            <h6>01 Jan 2045</h6>
+                            <p class="mb-0">Wed 11:30</p>
+                        </div>
+                    </div>
+                    <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                        <div class="ms-3">
+                            <h4 class="mb-3">quiz competetion</h4>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="overflow-hidden mb-5">
+                            <img src="img/event 1.jpg" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+                    <div class="col-3 col-lg-2 pe-0">
+                        <div class="text-center border-bottom border-dark py-3 px-2">
+                            <h6>01 Jan 2045</h6>
+                            <p class="mb-0">Thu 11:30</p>
+                        </div>
+                    </div>
+                    <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                        <div class="ms-3">
+                            <h4 class="mb-3">game competetion</h4>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+                            <a href="#" class="btn btn-primary px-3">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="overflow-hidden mb-5">
+                            <img src="img/event 2.jpg" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
-                <symbol id="close" viewBox="0 0 18 18">
-                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
-                            S17.507,13.698,17.507,9S13.698,0.493,9,0.493z M12.491,11.491c0.292,0.296,0.292,0.773,0,1.068c-0.293,0.295-0.767,0.295-1.059,0
-                            l-2.435-2.457L6.564,12.56c-0.292,0.295-0.766,0.295-1.058,0c-0.292-0.295-0.292-0.772,0-1.068L7.94,9.035L5.435,6.507
-                            c-0.292-0.295-0.292-0.773,0-1.068c0.293-0.295,0.766-0.295,1.059,0l2.504,2.528l2.505-2.528c0.292-0.295,0.767-0.295,1.059,0
-                            s0.292,0.773,0,1.068l-2.505,2.528L12.491,11.491z" />
-                </symbol>
-            </svg>
         </div>
-    </div>
+        <!-- Events End -->
 
-
-    <section id="contact">
-
-
-        <div class="links-icons">
-            <a href="https://www.facebook.com/mohdfawad99"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href="https://twitter.com/_fawaaad"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="https://www.instagram.com/_fawaaad/"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://www.youtube.com/"><i class="fab fa-youtube-square fa-2x"></i></a>
-            <a href="https://www.linkedin.com/in/mohd-fawad/"><i class="fab fa-invision fa-2x"></i></a>
-        </div>
     </section>
-
 
 
     <!-- Footer Start -->
@@ -197,46 +373,136 @@
 
     </div>
     <!-- Footer End -->
-    <style>
-        #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: #ffc107;
-            color: white;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 4px;
-        }
-    </style>
 
     <script>
-        var mybutton = document.getElementById("myBtn");
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
+
+
+        const photosByYear = {
+            '2024': [
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+                { src: 'img/event 1.jpg', title: 'Iot 1'  },
+               
+            
+            ],
+            '2023': [
+                { src: 'img/gall2.jpg', title: 'Iot 1', description: 'Description of iot 1' },
+                { src: 'img/event 1.jpg', title: 'game 2', description: 'Description of abc 2' },
+                { src: 'gall3.jpg', title: 'Event 3', description: 'Description of Event 3' }
+            ],
+            '2022': [
+                { src: 'photo4.jpg', title: 'Event 4', description: 'Description of Event 4' },
+                { src: 'photo5.jpg', title: 'Event 5', description: 'Description of Event 5' },
+                { src: 'photo6.jpg', title: 'Event 6', description: 'Description of Event 6' }
+            ],
+            '2021': [
+                { src: 'img/gall1.jpg', title: 'Event 7', description: 'Description of Event 7' },
+                { src: 'photo8.jpg', title: 'game sf 8', description: 'gvxgvx of Event 8' },
+                { src: 'gall2.jpg', title: 'Event 9', description: 'Description of Event 9' }
+            ]
+            // Add more years and their respective photo details as needed
+        };
+
+        const event = document.getElementById("event");
+        const eventitem = document.getElementById("event-item");
+
+        event.addEventListener("click", function () {
+            eventitem.style.display = "block";
+            event.style.background = "black";
+            event.style.color = "white";
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Show photos for the initial year (2024)
+            showPhotos('2024');
+
+            // Add event listeners to year links
+            var tabLinks = document.getElementsByClassName("year");
+            for (var i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].addEventListener("click", function (event) {
+                    // Get the year from the clicked link's text content
+                    var year = event.target.textContent.trim().split(" ")[2];
+                    // Show photos for the selected year
+                    showPhotos(year);
+                });
+            }
+        });
+
+        function showPhotos(year) {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = ''; // Clear previous content
+
+            if (year === "2025") {
+                // If the clicked link is for upcoming events, handle it separately
+                eventitem.style.display = "block";
+
+                // Remove active class from all year links
+                var tabLinks = document.getElementsByClassName("year");
+                for (var i = 0; i < tabLinks.length; i++) {
+                    tabLinks[i].classList.remove("active-links");
+                }
+                // Add active class to the "Upcoming Events" link
+                return;
+            }
+
+            const photos = photosByYear[year];
+            if (photos) {
+                // Group photos by event name
+                const groupedPhotos = {};
+                photos.forEach(photo => {
+                    if (!groupedPhotos[photo.title]) {
+                        groupedPhotos[photo.title] = [];
+                    }
+                    groupedPhotos[photo.title].push(photo);
+                });
+
+                // Iterate over grouped photos and display them
+                Object.keys(groupedPhotos).forEach(eventName => {
+                    const eventPhotos = groupedPhotos[eventName];
+                    const eventTitle = document.createElement('h3');
+                    eventTitle.classList.add('event-title')
+                    eventTitle.textContent = eventName;
+                    contentDiv.appendChild(eventTitle);
+
+                    eventPhotos.forEach(photo => {
+                        const cardDiv = document.createElement('div');
+                        cardDiv.classList.add('card');
+                        const img = document.createElement('img');
+                        img.src = photo.src;
+                        const cardContent = document.createElement('div');
+                        cardContent.classList.add('card-content');
+                        const description = document.createElement('p');
+                        description.classList.add('card-description');
+                        description.textContent = photo.description; // Event description
+                        cardContent.appendChild(description);
+                        cardDiv.appendChild(img);
+                        cardDiv.appendChild(cardContent);
+                        contentDiv.appendChild(cardDiv);
+                    });
+                });
+            }
+
+            // Highlight the selected year link
+            var tabLinks = document.getElementsByClassName("year");
+            for (var i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active-links");
+                if (tabLinks[i].textContent.includes(year)) {
+                    tabLinks[i].classList.add("active-links");
+                    eventitem.style.display = "none";
+                    event.style.background = "#ffffffcc";
+                    event.style.color = "blue";
+                }
             }
         }
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script src="./js/gallery.js"></script>
+    </script>
 </body>
 
 </html>
