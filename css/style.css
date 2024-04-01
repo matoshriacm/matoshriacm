@@ -77,6 +77,18 @@
 
 
 /*** Navbar ***/
+
+#title {
+  color: #59d8e9;
+  text-align: center; /* Center align the text by default */
+  font-size: 20pxrem;
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 767.98px) {
+ 
+}
+
 .navbar .dropdown-toggle::after {
   border: none;
   content: "\f107";
@@ -100,12 +112,17 @@
   color: var(--primary);
 }
 
+
+
 @media (max-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link  {
       margin-right: 0;
       padding: 10px 0;
   }
 
+  #title {
+    font-size: 1.85rem; /* Decrease font size for smaller screens */
+  }
   .navbar-light .navbar-nav {
       border-top: 1px solid #EEEEEE;
   }
@@ -141,6 +158,7 @@
       transform-origin: 0% 0%;
   }
 
+
   .navbar .nav-item:hover .dropdown-menu {
       top: 100%;
       transform: rotateX(0deg);
@@ -150,6 +168,16 @@
   }
 }
 
+#title {
+  color: #59d8e9;
+}
+
+/* Media query for screens below 1024px */
+@media (max-width: 1023px) {
+  #title {
+      font-size: 22px; /* Set font size to 20px for screens below 1024px */
+  }
+}
 
 /*** Header carousel ***/
 @media (max-width: 768px) {
