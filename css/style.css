@@ -1,4 +1,5 @@
 /********** Template CSS **********/
+
 :root {
   --primary: #06BBCC;
   --light: #F0FBFC;
@@ -175,7 +176,7 @@
 /* Media query for screens below 1024px */
 @media (max-width: 1023px) {
   #title {
-      font-size: 22px; /* Set font size to 20px for screens below 1024px */
+      font-size: 20px; /* Set font size to 20px for screens below 1024px */
   }
 }
 
