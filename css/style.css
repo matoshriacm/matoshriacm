@@ -82,13 +82,11 @@
 #title {
   color: #59d8e9;
   text-align: center; /* Center align the text by default */
-  font-size: 20pxrem;
+  /* font-size: 20px; */
 }
 
 /* Media query for screens smaller than 768px (typical mobile devices) */
-@media (max-width: 767.98px) {
- 
-}
+
 
 .navbar .dropdown-toggle::after {
   border: none;
@@ -115,14 +113,14 @@
 
 
 
-@media (max-width: 991.98px) {
+@media (min-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link  {
       margin-right: 0;
       padding: 10px 0;
   }
 
   #title {
-    font-size: 1.85rem; /* Decrease font size for smaller screens */
+    font-size: 20px; /* Decrease font size for smaller screens */
   }
   .navbar-light .navbar-nav {
       border-top: 1px solid #EEEEEE;
@@ -137,6 +135,8 @@
 .navbar-light .navbar-nav .nav-link {
   color: var(--dark);
   font-weight: 500;
+  font-size: 14px;
+    margin-right: 17px;
 }
 
 .navbar-light.sticky-top {
@@ -152,12 +152,22 @@
       visibility: hidden;
       transition: .5s;
   }
+  #title{
+    font-size: 18px;
+  }
 
+  .nav-item{
+    font-size: 10px;
+  }
   .navbar .dropdown-menu.fade-down {
       top: 100%;
       transform: rotateX(-75deg);
       transform-origin: 0% 0%;
   }
+  .px-lg-5 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
 
 
   .navbar .nav-item:hover .dropdown-menu {
@@ -169,16 +179,21 @@
   }
 }
 
-#title {
-  color: #59d8e9;
-}
+
 
 /* Media query for screens below 1024px */
-@media (max-width: 1023px) {
-  #title {
-      font-size: 20px; /* Set font size to 20px for screens below 1024px */
+@media (min-width: 1134px) {
+  #title{
+    font-size: 1.7rem;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 18px;
+      margin-right: 21px;
   }
 }
+
 
 /*** Header carousel ***/
 @media (max-width: 768px) {
@@ -653,3 +668,4 @@
   font-size: 14px;
   color: #666;
 }
+
