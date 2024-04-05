@@ -36,47 +36,56 @@
         <h2 style="font-size: 20px; color: #1924b4; text-align: center; margin: 0;">Matoshri Education Society's</h2>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+   
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="width: 100%;">
         <div>
-            <a href="index.html" class="navbar-brand d-flex align-items-center  px-lg-5" style="margin: 0 !important;">
-                <img style="width: 55px; margin-right: 10px;" src="./img/logo.png" alt="ACM">
-                <h2 id="title" style="color: #59d8e9;" class="m-0 text-primary"> Matoshri ACM Student Chapter</h2>
+            <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5" style="margin: 0 !important;">
+                <img id="logo-1" src="./img/logo.png" alt="ACM">
+                <h2 id="title" style="color: #59d8e9;" class="m-0 text-primary">Matoshri ACM Student Chapter</h2>
             </a>
         </div>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button class="navbar-toggler me-" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <div class="navbar-nav ms-auto p-2 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="about_acm.html" class="dropdown-item">About ACM</a>
-                        <a href="about_masc.html" class="dropdown-item">About Matoshri ACM</a>
-                    </div>
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">About</a>
+                    <ul class="dropdown-menu dropdown-menu-end fade" aria-labelledby="aboutDropdown">
+                        <li><a href="about_acm.html" class="dropdown-item">About ACM</a></li>
+                        <li><a href="about_masc.html" class="dropdown-item">About Matoshri ACM</a></li>
+                    </ul>
                 </div>
                 <a href="activities.html" class="nav-item nav-link">Activities</a>
-                <a href="gallery.html" class="nav-item nav-link">glimpse</a>
+                <a href="gallery.html" class="nav-item nav-link">Glimpse</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Teams</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Matoshri ACM</a>
-                        <a href="#" class="dropdown-item">ACM-W</a>
-                    </div>
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Teams</a>
+                    <ul class="dropdown-menu dropdown-menu-end fade" aria-labelledby="teamsDropdown">
+                        <li><a href="team.html" class="dropdown-item">Matoshri ACM</a></li>
+                        <li><a href="#" class="dropdown-item">ACM-W</a></li>
+                    </ul>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="./assets/Newsletter final.pdf" target="_blank" class="dropdown-item"> Newsletter</a>
-                        <a href="https://forms.gle/Qf132gGdM9QXYKGn6" class="dropdown-item">Contact-us</a>
-                    </div>
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">More</a>
+                    <ul class="dropdown-menu dropdown-menu-end fade" aria-labelledby="moreDropdown">
+                        <li><a href="./assets/Newsletter final.pdf" target="_blank" class="dropdown-item">Newsletter</a>
+                        </li>
+                        <li><a href="https://forms.gle/Qf132gGdM9QXYKGn6" class="dropdown-item">Contact-us</a></li>
+                    </ul>
                 </div>
             </div>
-            <a href="join.html" class="btn btn-primary py-2 px-3 d-none d-lg-inline-block">Join Now <i
-                    class="fa fa-arrow-right ms-2"></i></a>
+            <div class="d-flex align-items-center">
+                <a href="join.html" class="btn btn-primary py-2 px-3 d-none d-lg-inline-block">Join Now <i
+                        class="fa fa-arrow-right ms-2"></i></a>
+            </div>
         </div>
     </nav>
+
 
     <!-- Header Start -->
     <div class="container-fluid bg-primary py-5 mb-5 page-header">

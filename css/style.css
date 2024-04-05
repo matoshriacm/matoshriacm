@@ -85,6 +85,11 @@
   /* font-size: 20px; */
 }
 
+
+#logo-1 {
+  width: 55px;
+  margin-right: 10px;
+}
 /* Media query for screens smaller than 768px (typical mobile devices) */
 
 
@@ -99,7 +104,6 @@
 
 .navbar-light .navbar-nav .nav-link {
   margin-right: 30px;
-  padding: 25px 0;
   color: #FFFFFF;
   font-size: 15px;
   text-transform: uppercase;
@@ -116,7 +120,7 @@
 @media (min-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link  {
       margin-right: 0;
-      padding: 10px 0;
+     
   }
 
   #title {
@@ -133,10 +137,11 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
+  padding: 2px;
   color: var(--dark);
   font-weight: 500;
   font-size: 14px;
-    margin-right: 17px;
+    margin-right: 15px;
 }
 
 .navbar-light.sticky-top {
@@ -153,8 +158,9 @@
       transition: .5s;
   }
   #title{
-    font-size: 18px;
+    font-size: 22px;
   }
+
 
   .nav-item{
     font-size: 10px;
@@ -179,7 +185,11 @@
   }
 }
 
-
+@media (max-width: 768.98px){
+  .navbar-light .navbar-nav .nav-link {
+    padding: 10px;
+  }
+} 
 
 /* Media query for screens below 1024px */
 @media (min-width: 1134px) {
@@ -187,14 +197,31 @@
     font-size: 1.7rem;
   }
   .navbar-light .navbar-nav .nav-link {
+    padding: 2px;
     color: var(--dark);
     font-weight: 500;
-    font-size: 18px;
-      margin-right: 21px;
+    font-size: 17px;
+    margin-right: 19px;
   }
 }
 
-
+@media (max-width: 468px) {
+  #title{
+    font-size: 18px;
+  }
+  #logo-1 {
+    width: 42px;
+    margin-right: 5px;
+  }
+ 
+  .navbar-light .navbar-nav .nav-link {
+    padding: 5px;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 21px;
+  }
+}
 /*** Header carousel ***/
 @media (max-width: 768px) {
   .header-carousel .owl-carousel-item {
@@ -260,6 +287,40 @@
   color: var(--light);
 }
 
+#img-1{
+  object-fit: cover;
+  border-radius : 101px 0px 101px 0px;
+  width : 75%;
+  height : 75%;
+  left: 12%;
+}
+
+#position{
+  position: absolute;
+  top: 81%;
+  left: 22%;
+  width: 290px; 
+  text-align: center;
+}
+
+@media (max-width: 468px){
+  #position{
+    top: 80% ;
+    left: 10% ;
+  }
+}
+
+@media (min-width: 992px){
+  #img-1{
+    height : 60% ;
+    left: 12%;
+  }
+  
+  #position{
+    top: 67% ;
+    left: 17% ;
+  }
+}
 
 /*** Section Title ***/
 .section-title {
