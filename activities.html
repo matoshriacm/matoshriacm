@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mastoshri ACM Student Chapter</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    #sidebar {
+      display: flex;
+      padding: 20px;
+      border-radius: 10px;
+      background: #d1e5e5;
+      /* Semi-transparent white background */
+      backdrop-filter: blur(10px);
+      /* Blur effect for glass-like appearance */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      /* Soft shadow for depth */
+    }
+
+    #sidebar h2 {
+      font-size: 1.5rem;
+      /* Larger font size for headings */
+      color: #333;
+      /* Dark gray text color */
+    }
+
+    .year {
+      display: block;
+      padding: 10px 20px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Lighter semi-transparent white on hover */
+      color: #007bff;
+
+      /* Semi-transparent white background */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      /* Semi-transparent border */
+      border-radius: 20px;
+
+      /* Dark gray text color */
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      /* Smooth transitions */
+      cursor: pointer;
+    }
+
+    .active-links {
+      background-color: black;
+      color: white;
+    }
+
+    .year:hover {
+      transform: translateY(-2px);
+      /* Move up slightly on hover */
+    }
+
+
+
+
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .card-container {
+      text-align: center;
+      /* Center the event name */
+    }
+
+    .card-container h3 {
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .event-title {
+      color: #06bbcc !important;
+      font-size: 3.5rem;
+      text-align: center;
+    }
+
+    .event-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      /* Add gap between images */
+      margin-top: 10px;
+      /* Add some space between event name and images */
+    }
+
+    .card {
+      width: calc(33.33% - 20px);
+      margin: 10px;
+      background-color: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-description {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media screen and (max-width: 768px) {
+      .event-group {
+        flex-direction: column;
+        /* Change to column layout on smaller screens */
+        align-items: center;
+        /* Center items in column */
+      }
+
+      .card {
+        width: calc(50% - 20px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="topbar" style="background: #d3e7e7; padding: 5px; margin: 0;">
+    <h2 style="font-size: 20px; color: #1924b4; text-align: center; margin: 0;">Matoshri Education Society's</h2>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="width: 100%;">
+    <div>
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5" style="margin: 0 !important;">
+            <img id="logo-1" src="./img/logo.png" alt="ACM">
+            <h2 id="title" style="color: #59d8e9;" class="m-0 text-primary">Matoshri ACM Student Chapter</h2>
+        </a>
+    </div>
+    <button class="navbar-toggler me-" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-2 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">About</a>
+                <ul class="dropdown-menu dropdown-menu-end fade" aria-labelledby="aboutDropdown">
+                    <li><a href="about_acm.html" class="dropdown-item">About ACM</a></li>
+                    <li><a href="about_masc.html" class="dropdown-item">About Matoshri ACM</a></li>
+                </ul>
+            </div>
+            <a href="activities.html" class="nav-item nav-link">Activities</a>
+            <a href="gallery.html" class="nav-item nav-link">Glimpse</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">Teams</a>
+                <ul class="dropdown-menu dropdown-menu-end fade" aria-labelledby="teamsDropdown">
+                    <li><a href="team.html" class="dropdown-item">Matoshri ACM</a></li>
+                    <li><a href="login.html" class="dropdown-item">Admin Login</a></li>
+                </ul>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">More</a>
+                <ul class="dropdown-menu dropdown-menu-end fade" aria-labelledby="moreDropdown">
+                    <li><a href="./assets/Newsletter final.pdf" target="_blank" class="dropdown-item">Newsletter</a>
+                    </li>
+                    <li><a href="https://forms.gle/Qf132gGdM9QXYKGn6" class="dropdown-item">Contact-us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <a href="join.html" class="btn btn-primary py-2 px-3 d-none d-lg-inline-block">Join Now <i
+                    class="fa fa-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</nav>
+
+
+  <section id="event">
+    <!-- Events Start -->
+    <div class="container-fluid event py-5">
+      <div class="container py-5">
+        <h1 class="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">ACM <span class="text-primary">Activities</span>
+        </h1>
+
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> April 8, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">AWS and Microsoft Azure Configuration and instance development</h4>
+              <p class="mb-4">Department of Computer Engineering and Matoshri ACM student Chapter has organized "Tech
+                Talk Series -2k24" from 07/03/2024 to 25/04/2024 on various domains. Every week 2-3 Domain experts will
+                deliver lectures on various topics. Experts delivered a lecture on the topic “AWS and Microsoft Azure
+                Configuration and instance development”
+
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/neatleap.png" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> April 6, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Android Development for Mobile Application Development</h4>
+              <p class="mb-4">Department of Computer Engineering and Matoshri ACM student Chapter has organized "Tech
+                Talk Series -2k24" from 07/03/2024 to 25/04/2024 on various domains. Every week 2-3 Domain experts will
+                deliver lectures on various topics. Experts delivered a lecture on the topic
+
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/seed.jpg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> April 5, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Youth Mental Health First Aider (YMHFA) Program</h4>
+              <p class="mb-4">Department of Computer Engineering in association with Matoshri ACM student chapter and
+                Matoshri Education Society COPE Community has organized:
+                2 Days Training on "Youth Mental Health First Aider (YMHFA) Program"
+
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/cope.jpg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> April 3, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Multithreading for Game Development Applications</h4>
+              <p class="mb-4">Department of Computer Engineering and Matoshri ACM student Chapter has organized "Tech
+                Talk Series -2k24" from 07/03/2024 to 25/04/2024 on various domains. Every week 2-3 Domain experts will
+                deliver lectures on various topics. Experts delivered a lecture on the topic “Multithreading for Game
+                Development Applications” on 03/04/2024.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/multithread.jpg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> April 3, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Tech Talk Series -2k24</h4>
+              <p class="mb-4">Department of Computer Engineering and Matoshri ACM student Chapter has organized "Tech
+                Talk Series -2k24" from 07/03/2024 to 25/04/2024 on various domains. Every week 2-3 Domain experts will
+                deliver lectures on various topics. Experts delivered a lecture on the topic “Configure the Google
+                Analytics Salesforce Sales and Service Cloud Integration” on 03/04/2024.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/tech-talk.jpg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Mar 25, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Tech Talk Series -2k24</h4>
+              <p class="mb-4">Department of Computer Engineering and Matoshri ACM student Chapter has organized "Tech
+                Talk Series -2k24" from 07/03/2024 to 25/04/2024 on various domains. Every week 2-3 Domain experts will
+                deliver lectures on various topics. Experts delivered a lecture on the topic “Server Side Scripting
+                Language” on 28/03/2024</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/server.jpg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6>Mar 20, 2024 </h6>
+              <p class="mb-0"> Non Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Mindful Reels: Films For The Soul </h4>
+              <p class="mb-4">Department of Computer Engineering in association with Matoshri ACM student chapter and
+                Matoshri Education Society COPE Community has organized a screening of a movie on this World Happiness
+                Day celebrated on 20/03/2024 that will surely interest students. </p>
+              <p class="mb-4">Moive Name - Chhichhore. </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="./img/Activity/moive.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.3s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6>Mar 12, 2024</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Quiz Competition on Mental Health Awareness</h4>
+              <p class="mb-4">Department of Computer Engineering in association with Matoshri ACM student chapter and
+                Matoshri Education Society COPE Community organized the quiz competition on Mental Health Awareness. As
+                part of our ongoing efforts to promote mental health awareness and understanding, we've created a brief
+                quiz focused on this crucial topic.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/Quiz.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6>Mar 12, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Tech Talk Series -2k24: Predictive Big Data Analytics</h4>
+              <p class="mb-4">Department of Computer Engineering and Matoshri ACM student Chapter has organized "Tech
+                Talk Series -2k24" from 07/03/2024 to 25/04/2024 on various domains. Every week 2-3 Domain experts will
+                deliver lectures on various topics. Experts delivered a lecture on the topic “Predictive Big Data
+                Analytics” on 12/03/2024.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/DSBSA.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6>Mar 11, 2024</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">GameZone-Exhibition of Games</h4>
+              <p class="mb-4">GameZone-Exhibition of Games organized by the Matoshri ACM student Chapter in association
+                with the Department of Computer Engineering on 11/03/2024. Various types of games designed by the
+                participants exhibited in this event.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/Game.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Mar 11, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Tech Talk Series -2k24: Salesforce </h4>
+              <p class="mb-4">Department of Computer Engineering and Matoshri ACM student Chapter has organized "Tech
+                Talk Series -2k24" from 07/03/2024 to 25/04/2024 on various domains. Every week 2-3 Domain experts will
+                deliver lectures on various topics. Experts delivered a lecture on the topic “Salesforce” on 11/03/2024.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/salesforce.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Mar 10, 2024</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">ACM Chapter Officers Election</h4>
+              <p class="mb-4">Matoshri ACM Student Chapter organized an election process for "Chapter officers" for
+                Matoshri ACM Student Chapter on 10/03/2024. Students applied for the various posts. Jury members
+                selected the members for various posts based on their interview.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/recruiting.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Mar 09, 2024</h6>
+              <p class="mb-0">Non Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Historical Visit at Gondeshwar Temple</h4>
+              <p class="mb-4">Department of Computer Engineering in association with Matoshri ACM Student Chapter
+                organized a historical visit at Gondeshwar Temple, Sinnar on 09-03-2024. This temple is an 11th-12th
+                century Hindu temple located in Sinnar, a town in the Nashik district of Maharashtra, India. It features
+                a Panchayatana plan; with a main shrine dedicated to God Shiva; and four subsidiary shrines dedicated to
+                God Surya, God Vishnu, Goddess Parvati, and God Ganesha.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/gondeshwar.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Mar 09, 2024,</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Codecrunch - A Quiz Competition</h4>
+              <p class="mb-4">Matoshri ACM Student Chapter in association with the Computer Engineering Department
+                organized the Codecrunch -a quiz competition on 09-03-2024 for all Computer Engineering students. Two
+                rounds were conducted to evaluate the students.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/codecrunch.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Feb 26, 2024</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Annual General Meeting of MASC Chapter</h4>
+              <p class="mb-4">Matoshri ACM Student Chapter in association with the Department of Computer Engineering
+                organized the Annual General Meeting of MASC on 26/02/2024. This occasion marked not only an annual
+                reflection on our achievements but also the commencement of a new chapter filled with fresh aspirations
+                and opportunities.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/annual meet.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Feb 27, 2024</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Seminar on Industrial Core Java Programming</h4>
+              <p class="mb-4">Matoshri ACM Student Chapter in association with the Department of Computer Engineering
+                organized Industrial Core Java programming on 27/02/2024. This Seminar gave insights on core Java
+                programming concepts for solving real life problems.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/core java.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Jan 20, 2024</h6>
+              <p class="mb-0">Non Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Poster Design Competition </h4>
+              <p class="mb-4">Matoshri College of Engineering and Research Centre Nashik, Department of Computer
+                Engineering in association with Matoshri ACM Student Chapter organising a Poster Design Competition .
+              <p>Poster Competition Themes:-</p>
+              <p>1. Green Skills For Youth: Towards a Sustainable World. </p>
+              <p>2. It's all in the Mind: National Youth. </p>
+              <p>3. Youth Day: "Rejoining in Hope". </p>
+              <p>4. Swami Vivekananda...A Real Hero. </p>
+              <p>5. Shiv Swaraj Day...A Divine Celebration.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/poster.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Oct 20, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">INTERNATIONAL CONFERENCE ON CONTENTS, COMPUTING & COMMUNICATION</h4>
+              <p class="mb-4">International conference on contents, computing and communication has oragansied by the
+                Department of Computer Engineering, MCOERC Nashik in association with Matoshri ACM student chapter,
+                Nashik on 20/10/2023 to 21/10/2023. Total 55 papers are selected from various reagions of India and
+                other countries for various track. In this occasion, Dr. G. K. Kharate, Principal, MCOERC, Dr. Varsha
+                Patil,Vice Principal and Head of Computer Department, Dr. Bhushan Garware chief guest and All Head of
+                the department, MCOERC were present for inauguration ceremony. Brief introduction about ICCCC-2023 was
+                delivered by Dr. Swati A. Bhavsar, Convenor, ICCCC-2023. Keynote speech was delivered by Dr. Bhushan
+                Garware on OpenAi. Every track of conference judged by the renowned persons. This conference was
+                organised by Dr. Ranjit Gawande, Co convenor, Dr. Swati A. Bhavsar, Convenor, and team under the
+                guidance of Dr. Varsha H.Patil , Head, Vice Principal, MCOERC Nashik.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/international meet.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Jul 22, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">PoSH (Prevention of sexual harassment) act and Safe Workplaces</h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, women's grievance redressal cell and Anti sexual harassment cell, MCERC,
+                Nashik has PoSH (Prevention of sexual harassment) act and Safe Workplaces on 22nd July 2023. Around 100
+                faculty members and students from various colleges of Matoshri education Society, Nashik were attended
+                this event. It was a monologue and addressed the crucial topic of the Prevention of Sexual Harassment
+                (PoSH) and its significance in safeguarding women's rights. The Act is designed to create a safe and
+                inclusive environment for women in various spheres of life was the focal point of the discussion. In
+                this view, Dr. G. K. Kharate, Principal, MCOERC, Nashik, Dr. Varsha Patil, Vice Princiapl & Head of
+                Computer Department, Dr. Sanjay Bagul, Principal, M.A.Polytechnic, Dr. Yogesh Gosavi, Director, Matoshri
+                MBA, Dr. Gokul Talele, Principal, MCOP, Vaishali Suryawanshi, Principal, B.E.D College, were present.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/posh.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Aug 01, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Logo Design Competition.</h4>
+              <p class="mb-4">Department of computer Engineering MCOERC in Association with Matoshri ACM student Chapter
+                has organised the logo design competition. Around 40 students participated in the event. Dr. Geetanjali
+                Kale · Head & Associate Professor, Department of Computer Engineering judged the event. As a result,
+                unique design is selected for the MASC's logo. Mr. Hemraj Jadhav and Mr. Rushikesh Malode secured first
+                and second prize respectively. Principal Dr. G. k. Kharate and Head & Vice Principal Dr. V. H. Patil
+                felicitated the winners.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/logo.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Dec 26, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Teachers' Training on Autonomy with National Education Policy Focus </h4>
+              <p class="mb-4">We are excited to announce an upcoming training session specifically tailored to explore
+                the nuances of educational autonomy within the framework of the National Education Policy (NEP). This
+                training aims to equip you with the knowledge and skills necessary to navigate the evolving landscape of
+                autonomous education institutions. This training is a valuable opportunity for you to deepen your
+                understanding of autonomy in education and its alignment with the broader national policy objectives.
+                Distinguished speakers with expertise in both autonomy and the NEP will guide the sessions, fostering an
+                environment for knowledge exchange and professional growth. Your and teachers of institute active
+                participation is highly encouraged, as we believe your insights will contribute significantly to the
+                success of this training initiative.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/fdp.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Nov 2, 2023</h6>
+              <p class="mb-0">Community</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Big Buddy Program </h4>
+              <p class="mb-4">Department of Computer Engineering and Matoshri ACM student Chapter has organized Big
+                Buddy program. Our students conducted various activities viz. teaching of various subjects, drawing,
+                coloring, handcrafts, mind refreshment and brainstorming activity and some games for school students
+                from Class I to Class X. School students enjoyed the activities. In this program our second year
+                students got knowledge about various aspects of teaching, administration, and some change in the lives
+                of the young students they mentor as buddies or big brother. Students learnt to be accountable as social
+                contributors. Students got appreciation and respect towards the responsibility of teaching.
+              </p>
+              <ul>
+                <li><strong>Venue: </strong> Matoshri Academy (CBSE), Eklahare, Nashik” & Matoshri Asarabai Darade
+                  English Medium School,
+                  Eklahare, Nashik
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/BigB.jpg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Aug 04, 2023</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Welcome Function for Second Year Computer Engineering students</h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, MCERC, Nashik has organized welcome function for the second year students
+                on 4th August 2023. Around 109 SE students were attended this event. During this function students are
+                welcomed and video of Details and journey of Department of Computer Engineering was shown. At the end of
+                the function breakfast was distributed among the students.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/SEWelcome.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Oct 25, 2023</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Historical visit to “Veer Sawarkawada, Bhagur Devi Mandir, Bhagur and Church, Nashik”
+              </h4>
+              <p class="mb-4">In this visit students got the knowledge about Indian culture and history; also understood
+                understand various aspects so that they can apply a technological solution to preserve that places and
+                maintain the information about those places.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/Bhagur visit.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Aug 26, 2023</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">De-addiction guidance camp </h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, has organized “De-addiction guidance camp” on 26th August 2023. Around 110
+                faculty members and students from various colleges of Matoshri education Society, Nashik were attended
+                this event. As many young people in our Maharashtra are addicted, with this mind, this camp became
+                platform to discuss the different issues of addictions and its solution. The camp was included
+                de-addiction guidance as well as proper advice and treatment. It was accessible to the general public
+                through our faculty members and students. Dr. Rajan Patil, founder of Sisode Health Care conducted the
+                camp. In this view, Dr. G. K. Kharate, Principal, MCOERC, Nashik, Dr. Varsha Patil, Vice Principal &
+                Head of Computer Department, Dr. Sanjay Bagul, Principal, M.A.Polytechnic, Dr. Yogesh Gosavi, Director,
+                Matoshri MBA, Dr. Gokul Talele, Principal, MCOP, Vaishali Suryawanshi, Principal, B.E.D College, were
+                present.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/De-addi.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Jul 18, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">One week Short Term Training Program on “Data Science” </h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, MCERC, Nashik has organized One week Short Term Training Program on “Data
+                Science” from 18/07/2023 to 22/07/2023. Around 76 students participated in this event. During this
+                training session following syllabi was covered. Syllabus covered: • Module 1 : Python For Data Science •
+                Module 2 : Tableau Visualization Tool • Module 3 : Power BI • Module 4: Microsoft Excel • Module 5 :
+                Statistics for Data Science • Module 6 : Machine Learning</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/DS.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> May 15, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">A PROJECT COMPETITION “PROJECTMINE 2K23” </h4>
+              <p class="mb-4">Department of Computer Engineering in association with Pinnacle club and Matoshri ACM
+                Student Chapter, MCERC, Nashik has organized a project competition “ProjectMine 2k23” on 15th May 2023.
+                Around 26 groups from various colleges like KKWIEER, Nashik, PVGCOE, Nashik, METCOE, Sanjivani COE,
+                Kopargaon, Guru Govind Singh COE, MCOERC, Nashik etc. participated in this event.</p>
+              <p> The Netleap Solution, Nashik sponsored this event by offering trophies (for winner), certificate and
+                gift vouchers to participants. Dr. Prashant Yawalkar and Mr. M. T. Dhande judged the projects. </p>
+              <p> Following are the winners of this event:- </p>
+              <p> Rank 1:- Block chain based estate market made by Niraj Bharambe, Anvay Gaydhani, Abhishek Jadhav of
+                KKWIEER, Nashik </p>
+              <p> Rank 2:- Automatic Traffic sign Detection and Recognition made by Sanket Kale, Shubham Kolate, Mayur
+                Magar, Mayur Bose of MCOERC, Nashik</p>
+              <p> Rank 3:- Car Security system using flutter and IoT made by Jivan Aher, Shreyasi Bagul, Virendra
+                Dhanray,Sakshi Jagdale of PVGCOE, Nashik </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/Projectmine 2023.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Mar 28, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Expert talk on configure the google analytics salesforce sales and service cloud
+                integration.</h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club,
+                MCERC, Nashik has organized an expert Talk on Configure the Google Analytics Salesforce Sales and
+                Service Cloud Integration on 28/03/2023. Mr. Prashant Koli delivered the lecture. In this expert talk
+                students were learned how to identify the users required for Salesforce sales and cloud objects and
+                fields, App designing, integration and sales flow. Students are aware of Apex programming language as
+                well as Salesforce App development.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/expert talk salesforce.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Mar 31, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Expert talk on sustainable software defined networking solutions </h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club,
+                MCERC, Nashik has organized an expert Talk on Sustainable Software Defined Networking solutions on
+                31/03/2023. Dr. Ranjana P. Dahake delivered the online lecture. In this expert talk students were
+                learned difference between traditional network and software defined network. Also they learned about how
+                to design the sustainable software network.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/expert Networking.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> April 19, 2023</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Visit to Dilasa Care Center</h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, MCERC, Nashik has organized visit to Dilasa Care center, Nashik on 19th
+                April 2023. Second year students were visited the center. Students interacted with grandparents and
+                conduct small game/activity for them. In the view of visit, fruits and ceiling fans were donated.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/dilasa.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Apr 19, 2023 </h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Visit To Balikashram, Trimbakehswar</h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, MCERC, Nashik has organized visit to Balikashram, Trimbakehswar, Nashik on
+                19th April 2023. Third year and Final year students were visited the Balsadan. Students interacted with
+                children and staff members of the Balsadan. In the view of visit, grocery and cash amount were donated.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/visit trimbak.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Apr 24, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">IoTNICS IoT Based Project Competition </h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, MCERC, Nashik has organized IoTnics 2022-23 IoT based project competition
+                on 24/04/2023. Around 60 students participated in this competition. Winners are rewarded with
+                certificate and cash prizes.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/IoTonics1.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> Apr 25, 2023</h6>
+              <p class="mb-0">Community related</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Industrial visit to “THE BAAP COMPANY, SANGAMNER” </h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, MCERC, Nashik has organized visit to “The Baap Company, Sangamner” on 25th
+                April 2023. In this visit students got the knowledge about Indian start-up aspects; also understood
+                about how to use the Modern tools and technology used in the software industry. Students were learned
+                about different strategies required to execute the project and also discussed the IoT and Web based
+                techniques used to resolve the societal issues.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/visit Baap.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+          <div class="col-3 col-lg-2 pe-0">
+            <div class="text-center border-bottom border-dark py-3 px-2">
+              <h6> May 08, 2023</h6>
+              <p class="mb-0">Techical</p>
+            </div>
+          </div>
+          <div class="col-9 col-lg-6 border-start border-dark pb-5">
+            <div class="ms-3">
+              <h4 class="mb-3">Expert talk on "Cloud Computing Security Issues And Its Solution" </h4>
+              <p class="mb-4">Department of Computer Engineering in association with association with Pinnacle club and
+                Matoshri ACM Student Chapter, MCERC, Nashik has organized an expert Talk on “Cloud Computing Security
+                Issues and its Solution” on 08/05/2023. Mr. Rushikesh Jadhav, CTO, ESDS, Nashik delivered lecture. All
+                students of computer department atended the same. In this occasion we formaly innagurated the Matoshri
+                ACM Chapter.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="overflow-hidden mb-5">
+              <img src="img/Activity/innogration.jpeg" class="img-fluid w-100" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+        </div>
+      </div>
+      <!-- Events End -->
+  </section>
+
+
+
+  <!-- Footer Start -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-white mb-3">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="about_acm.html" class="text-light">About ACM</a></li>
+            <li><a href="about_masc.html" class="text-light">About MASC</a></li>
+            <li><a href="team.html" class="text-light">Team</a></li>
+            <li><a href="./assets/Newsletter final.pdf" target="_blank" class="text-light">Newsletter</a>
+            </li>
+            <li><a href="join.html" class="text-light">Join MASC</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-white mb-3">Contact</h4>
+          <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>MCOERC, Nashik, India</p>
+          <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+91 0253 2406600</p>
+          <p class="mb-2"><i class="fas fa-envelope me-2"></i>comp_acm@matoshri.edu.in</p>
+          <div class="d-flex pt-2">
+            <a href="https://www.facebook.com/profile.php?id=61554978084194&mibextid=ZbWKwL"
+              class="btn btn-outline-light btn-social me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/acm_matoshri?igsh=MzNlNGNkZWQ4Mg=="
+              class="btn btn-outline-light btn-social me-2"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/matoshri-acm-student-chapter-7317b72a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              class="btn btn-outline-light btn-social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-white mb-3">Location</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14997.720516995343!2d73.9106!3d19.9904543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddc0eac0935aab%3A0xbf2108ae5c1a3118!2sMatoshri%20College%20Of%20Engineering%20%26%20Research%20Centre%2C%20Eklhare%2C%20Nashik!5e0!3m2!1sen!2sin!4v1710741063478!5m2!1sen!2sin"
+            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <p class="text-white mb-0">Designed and Developed by <a
+          href="https://www.linkedin.com/in/rushikesh-rajapure-9b411b1ba/" class="text-light">Rushikesh
+          Rajapure</a>,
+        <a href="https://www.linkedin.com/in/pratik-ugalmugale-327279230" class="text-light">Pratik
+          Ugalmugale</a>, <a href="https://www.linkedin.com/in/vedant-sonawane-9979a127a" class="text-light">Vedant
+          Sonawane</a>
+      </p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+</body>
+
+</html>
